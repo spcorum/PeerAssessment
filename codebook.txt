@@ -1,0 +1,60 @@
+Codebook for Peer Assessment Activity - Getting and Cleaning Data - Data Science Specialization on Coursera.
+
+- The data are from a study of human movement using a smartphone as a motion detector. Description of study and how the data were obtained can be found here:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+- Here is an excerpt from the study that describes the data:
+
+“The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.”
+
+- The dataset tidydata.txt is an aggregated subset of the original data, where any mean and standard deviation variables have been averaged for each participant and activity.
+
+- The variables in tidydata.txt are as follows:
+
+	SubjectID - integer id of the test or train subject
+
+	Activity - self descriptive string describing the activity of the subject when the data where obtained
+
+	ActivityCode - integer id of code associated with the activity:
+
+		1 WALKING
+		2 WALKING_UPSTAIRS
+		3 WALKING_DOWNSTAIRS
+		4 SITTING
+		5 STANDING
+		6 LAYING
+
+	(the following are described at the beginning of this document)
+
+	tBodyAcc-XY, or Z - mean or std - aggregated average for each subject/activity
+	tGravityAcc-XY, or Z - mean or std - aggregated average for each subject/activity
+	tBodyAccJerk-XY, or Z - mean or std - aggregated average for each subject/activity
+	tBodyGyro-XY, or Z - mean or std - aggregated average for each subject/activity
+	tBodyGyroJerk-XY, or Z - mean or std - aggregated average for each subject/activity
+	tBodyAccMag - mean or std - aggregated average for each subject/activity
+	tGravityAccMag - mean or std - aggregated average for each subject/activity
+	tBodyAccJerkMag - mean or std - aggregated average for each subject/activity
+	tBodyGyroMag - mean or std - aggregated average for each subject/activity
+	tBodyGyroJerkMag - mean or std - aggregated average for each subject/activity
+	fBodyAcc-XY, or Z - mean or std - aggregated average for each subject/activity
+	fBodyAccJerk-XY, or Z - mean or std - aggregated average for each subject/activity
+	fBodyGyro-XY, or Z - mean or std - aggregated average for each subject/activity
+	fBodyAccMag - mean or std - aggregated average for each subject/activity
+	fBodyAccJerkMag - mean or std - aggregated average for each subject/activity
+	fBodyGyroMag - mean or std - aggregated average for each subject/activity
+	fBodyGyroJerkMag - mean or std - aggregated average for each subject/activity
+
+	(Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable)
+
+	gravityMean - aggregated average for each subject/activity
+	tBodyAccMean - aggregated average for each subject/activity
+	tBodyAccJerkMean - aggregated average for each subject/activity
+	tBodyGyroMean - aggregated average for each subject/activity
+	tBodyGyroJerkMean - aggregated average for each subject/activity
